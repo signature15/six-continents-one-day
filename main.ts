@@ -1,3 +1,4 @@
+import { join } from 'node:path';
 /**
  * six-continents-one-day — entry for the make.fun news-image-20261118
  * bounty, archived as entry.png at the root of this repository.
@@ -27,8 +28,6 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
-import { join } from 'path';
-
 const input = join(import.meta.dirname, 'entry.png');
 const output = join('/output', 'entry.png');
 
