@@ -29,9 +29,10 @@
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
-const input = 'entry.png';
+const input = join(import.meta.dirname, 'entry.png');
 const output = join('/output', 'entry.png');
 
+mkdirSync('/output', { recursive: true });
 mkdirSync('/output', { recursive: true });
 const data = readFileSync(input);
 writeFileSync(output, data);
